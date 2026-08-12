@@ -1,628 +1,108 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<title>Elektrik Piyasası Hesaplama Araçları</title>
-<style>
-  :root {
-    --bg: #0f1419;
-    --card: #1a2129;
-    --accent: #7c3aed;
-    --accent2: #a855f7;
-    --text: #e8eaed;
-    --muted: #9ca3af;
-    --border: #2d3540;
-    --green: #22c55e;
-    --amber: #f59e0b;
-    --red: #f87171;
-    --blue: #38bdf8;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: linear-gradient(135deg, #0f1419 0%, #161c24 100%);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    padding: 24px 16px;
-  }
-  .wrap { max-width: 780px; margin: 0 auto; }
-  h1 {
-    font-size: 1.4rem;
-    margin: 0 0 4px 0;
-    background: linear-gradient(90deg, var(--accent2), #ec4899);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+<div class="text-center mb-16 relative">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4 lang-tr">Profesyonel <span class="text-sky-400">Staj & Deneyimler</span></h2>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4 lang-en hidden-lang">Professional <span class="text-sky-400">Experience</span></h2>
+                <div class="w-24 h-1 bg-sky-500 mx-auto rounded-full"></div>
+            </div>
 
-  .tabs {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border);
-  }
-  .tab-btn {
-    background: transparent;
-    border: none;
-    color: var(--muted);
-    padding: 10px 18px;
-    font-size: 0.92rem;
-    font-weight: 600;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    transition: all 0.15s;
-  }
-  .tab-btn.active {
-    color: var(--accent2);
-    border-bottom-color: var(--accent2);
-  }
-  .tab-btn:hover:not(.active) { color: var(--text); }
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AKSA BESS Deneyimi -->
+                <div class="experience-card relative group bg-slate-800/40 border border-slate-700/50 rounded-2xl p-8 hover:bg-slate-800/80 transition-all duration-500 overflow-hidden">
+                    <div class="absolute -right-6 -top-6 text-sky-500/10 group-hover:text-sky-500/20 transition-colors duration-500">
+                        <i data-lucide="zap" class="w-32 h-32"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="text-sky-400 text-sm font-bold tracking-widest mb-3 uppercase lang-tr">Temmuz - Ağustos 2026</div>
+                        <div class="text-sky-400 text-sm font-bold tracking-widest mb-3 uppercase lang-en hidden-lang">July - August 2026</div>
+                        
+                        <div class="flex items-center gap-3 mb-2">
+                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Aksa_Jenerat%C3%B6r_Logo.svg/512px-Aksa_Jenerat%C3%B6r_Logo.svg.png" alt="AKSA Logo" class="w-auto h-6 object-contain" onerror="this.style.display='none'">
+                             <h3 class="text-2xl font-bold text-white">AKSA BESS</h3>
+                        </div>
+                        
+                        <div class="text-lg text-slate-300 font-medium mb-6 lang-tr">Yeni Enerji Teknolojileri Stajyeri</div>
+                        <div class="text-lg text-slate-300 font-medium mb-6 lang-en hidden-lang">New Energy Technologies Intern</div>
+                        
+                        <p class="text-slate-400 leading-relaxed lang-tr">
+                            Batarya Enerji Depolama Sistemleri (BESS) biriminde tek hat şemalarının incelenmesi, CAPEX hesaplamaları ve şebeke optimizasyon süreçleri üzerine uygulamalı çalışmalar.
+                        </p>
+                        <p class="text-slate-400 leading-relaxed lang-en hidden-lang">
+                            Hands-on work on reviewing single-line diagrams, CAPEX calculations, and grid optimization processes in the Battery Energy Storage Systems (BESS) unit.
+                        </p>
+                    </div>
+                </div>
 
-  .panel { display: none; }
-  .panel.active { display: block; }
+                <!-- GE Vernova Deneyimi -->
+                <div class="experience-card relative group bg-slate-800/40 border border-slate-700/50 rounded-2xl p-8 hover:bg-slate-800/80 transition-all duration-500 overflow-hidden">
+                    <div class="absolute -right-6 -top-6 text-emerald-500/10 group-hover:text-emerald-500/20 transition-colors duration-500">
+                        <i data-lucide="factory" class="w-32 h-32"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="text-emerald-400 text-sm font-bold tracking-widest mb-3 uppercase lang-tr">Haziran - Ağustos 2025</div>
+                        <div class="text-emerald-400 text-sm font-bold tracking-widest mb-3 uppercase lang-en hidden-lang">June - August 2025</div>
+                        
+                        <div class="flex items-center gap-3 mb-2">
+                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/GE_Vernova_logo.svg/512px-GE_Vernova_logo.svg.png" alt="GE Vernova Logo" class="w-auto h-6 object-contain" onerror="this.style.display='none'">
+                            <h3 class="text-2xl font-bold text-white">General Electric-Vernova</h3>
+                        </div>
+                        
+                        <div class="text-lg text-slate-300 font-medium mb-6 lang-tr">Ar-Ge Elektrik Dizayn Stajyeri</div>
+                        <div class="text-lg text-slate-300 font-medium mb-6 lang-en hidden-lang">R&D Electrical Design Intern</div>
+                        
+                        <p class="text-slate-400 leading-relaxed lang-tr">
+                            Ar-Ge Elektrik Dizayn ve fabrika süreçlerini gözlemleme fırsatı.
+                        </p>
+                        <p class="text-slate-400 leading-relaxed lang-en hidden-lang">
+                            Opportunity to observe R&D Electrical Design and factory processes.
+                        </p>
+                    </div>
+                </div>
 
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 20px;
-    margin-bottom: 16px;
-  }
-  .card h2 {
-    font-size: 0.95rem;
-    margin: 0 0 16px 0;
-    color: var(--accent2);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .toggle-btn {
-    font-size: 0.7rem;
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    padding: 4px 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    text-transform: none;
-    letter-spacing: 0;
-  }
-  .toggle-btn:hover { border-color: var(--accent2); color: var(--accent2); }
-  label {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-bottom: 6px;
-    margin-top: 14px;
-  }
-  label:first-of-type { margin-top: 0; }
-  input, select {
-    width: 100%;
-    background: #0f1419;
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 10px 12px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-  }
-  input:focus, select:focus { outline: none; border-color: var(--accent2); }
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .hint { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
-  .kbk-note { font-size: 0.78rem; color: var(--amber); margin-top: 6px; }
+                <!-- ENERSYS Akü Deneyimi -->
+                <div class="experience-card relative group bg-slate-800/40 border border-slate-700/50 rounded-2xl p-8 hover:bg-slate-800/80 transition-all duration-500 overflow-hidden">
+                    <div class="absolute -right-6 -top-6 text-orange-500/10 group-hover:text-orange-500/20 transition-colors duration-500">
+                        <i data-lucide="battery-charging" class="w-32 h-32"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="text-orange-400 text-sm font-bold tracking-widest mb-3 uppercase lang-tr">Temmuz - Eylül 2024</div>
+                        <div class="text-orange-400 text-sm font-bold tracking-widest mb-3 uppercase lang-en hidden-lang">July - September 2024</div>
+                        
+                        <div class="flex items-center gap-3 mb-2">
+                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Enersys_logo.svg/512px-Enersys_logo.svg.png" alt="ENERSYS Logo" class="w-auto h-6 object-contain" onerror="this.style.display='none'">
+                            <h3 class="text-2xl font-bold text-white">ENERSYS Akü</h3>
+                        </div>
+                        
+                        <div class="text-lg text-slate-300 font-medium mb-6 lang-tr">Gönüllü Stajyer</div>
+                        <div class="text-lg text-slate-300 font-medium mb-6 lang-en hidden-lang">Volunteer Intern</div>
+                        
+                        <p class="text-slate-400 leading-relaxed lang-tr">
+                            Endüstriyel akü ve depolama çözümlerinde global lider olan firmada kurşun-asit ve lityum batarya teknolojileri üzerine saha ve üretim ofisi deneyimi.
+                        </p>
+                        <p class="text-slate-400 leading-relaxed lang-en hidden-lang">
+                            Field and production office experience on lead-acid and lithium battery technologies at the global leader in industrial battery and storage solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-  .slider-row { display: flex; align-items: center; gap: 12px; }
-  .slider-row input[type=range] { flex: 1; accent-color: var(--accent2); }
-  .slider-val { min-width: 90px; text-align: right; font-weight: 600; color: var(--accent2); font-size: 0.9rem; }
+                    <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl leading-relaxed font-light lang-tr">
+                        Yıldız Teknik Üniversitesi 4. sınıf Elektrik Mühendisliği öğrencisiyim.
+                    </p>
+                    <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl leading-relaxed font-light lang-en hidden-lang">
+                        4th-year Electrical Engineering student at Yıldız Technical University.
+                    </p>
 
-  .result-card { background: linear-gradient(135deg, #2a1a4a 0%, #1a2129 100%); border: 1px solid var(--accent); }
-  .formula {
-    font-family: 'SF Mono', Consolas, monospace;
-    background: #0f1419;
-    border-radius: 8px;
-    padding: 12px 14px;
-    font-size: 0.85rem;
-    color: var(--accent2);
-    margin-bottom: 16px;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  .big-result { font-size: 1.9rem; font-weight: 700; color: var(--green); margin: 4px 0 4px 0; }
-  .big-result .unit { font-size: 1rem; color: var(--muted); font-weight: 400; }
-  .breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
-  .bd-item { background: #0f1419; border-radius: 8px; padding: 10px 12px; }
-  .bd-item .label { font-size: 0.72rem; color: var(--muted); margin: 0; }
-  .bd-item .val { font-size: 1.05rem; font-weight: 600; margin-top: 2px; }
+                    <div class="flex flex-wrap items-center gap-4 w-full">
+                        <a href="#projeler" class="bg-sky-500 hover:bg-sky-400 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg shadow-sky-500/25 flex items-center">
+                            <span class="lang-tr">Projeleri İncele</span>
+                            <span class="lang-en hidden-lang">View Projects</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                        <button type="button" onclick="openModal('modal-qr')" class="bg-slate-800/80 backdrop-blur hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-xl border border-slate-600 transition-all duration-300 flex items-center justify-center">
+                            <i data-lucide="qr-code" class="w-5 h-5 mr-2 text-sky-400"></i> 
+                            <span class="lang-tr">CV (QR)</span><span class="lang-en hidden-lang">CV (QR)</span>
+                        </button>
+                    </div>
+                </div>
 
-  .extras-list { margin-top: 16px; border-top: 1px solid var(--border); padding-top: 14px; }
-  .extra-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); padding: 5px 0; }
-  .extra-row .v { color: var(--text); font-weight: 500; }
-  .total-row {
-    display: flex; justify-content: space-between; align-items: baseline;
-    margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border);
-  }
-  .total-row .tlabel { color: var(--muted); font-size: 0.9rem; }
-  .total-row .tval { font-size: 1.5rem; font-weight: 700; }
-  .mahsup-tag { display: inline-block; font-size: 0.75rem; padding: 2px 9px; border-radius: 20px; margin-left: 8px; font-weight: 600; }
-  .mahsup-plus { background: rgba(248,113,113,0.15); color: var(--red); }
-  .mahsup-minus { background: rgba(34,197,94,0.15); color: var(--green); }
-
-  .checkbox-row { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
-  .checkbox-row input[type="checkbox"] { width: auto; accent-color: var(--accent2); }
-  .checkbox-row label { margin: 0; color: var(--text); font-size: 0.88rem; }
-  .extras-inputs {
-    display: none; grid-template-columns: 1fr 1fr; gap: 12px;
-    margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--border);
-  }
-  .extras-inputs.open { display: grid; }
-
-  .cap-badge {
-    display: inline-block; font-size: 0.72rem; padding: 3px 10px; border-radius: 20px;
-    margin-top: 8px; font-weight: 600; background: rgba(245,158,11,0.15); color: var(--amber);
-  }
-  .chart-wrap { margin-top: 8px; }
-  .legend { display: flex; gap: 16px; font-size: 0.75rem; color: var(--muted); margin-top: 6px; flex-wrap: wrap; }
-  .legend span { display: flex; align-items: center; gap: 5px; }
-  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
-
-  .footnote { font-size: 0.75rem; color: var(--muted); margin-top: 20px; line-height: 1.5; }
-</style>
-</head>
-<body>
-<div class="wrap">
-  <h1>Elektrik Piyasası Hesaplama Araçları</h1>
-  <div class="sub">SKTT fatura hesaplayıcı ve BESS lisans teminat hesaplayıcı bir arada</div>
-
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="sktt">SKTT Hesaplama</button>
-    <button class="tab-btn" data-tab="teminat">Teminat Hesaplama</button>
-  </div>
-
-  <!-- ============ SKTT PANEL ============ -->
-  <div class="panel active" id="panel-sktt">
-
-    <div class="card">
-      <h2>Piyasa Verileri</h2>
-      <div class="row">
-        <div>
-          <label for="ptf">PTF — Piyasa Takas Fiyatı (TL/MWh)</label>
-          <input type="number" id="ptf" value="2800" step="1">
-          <div class="hint">EPİAŞ Şeffaflık Platformu → Piyasalar → PTF</div>
-        </div>
-        <div>
-          <label for="yekdemPreset">YEKDEM — 2026 Ay Seçimi (öngörülen)</label>
-          <select id="yekdemPreset">
-            <option value="custom">-- Elle gir --</option>
-            <option value="189.15">Temmuz — 189,15 TL/MWh</option>
-            <option value="213.89">Ağustos — 213,89 TL/MWh</option>
-            <option value="330.66">Eylül — 330,66 TL/MWh</option>
-            <option value="332.82">Ekim — 332,82 TL/MWh</option>
-            <option value="302.57">Kasım — 302,57 TL/MWh</option>
-            <option value="224.02">Aralık — 224,02 TL/MWh</option>
-          </select>
-        </div>
-      </div>
-
-      <label for="yekdem">YEKDEM Birim Maliyeti (TL/MWh)</label>
-      <input type="number" id="yekdem" value="350" step="1">
-      <div class="hint">rapor.epias.com.tr → YEKDEM Raporları → Birim Maliyet Raporu'ndan güncel değeri alabilirsiniz</div>
-
-      <div class="checkbox-row">
-        <input type="checkbox" id="mahsupOn">
-        <label for="mahsupOn">Mahsuplaşma farkını dahil et (tahmini ile kesinleşen YEKDEM arasındaki fark)</label>
-      </div>
-      <div id="mahsupWrap" style="display:none;">
-        <label for="mahsupFark">Mahsuplaşma Farkı (TL/MWh — kesinleşen fazlaysa (+), azsa (−) girin)</label>
-        <input type="number" id="mahsupFark" value="0" step="1">
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Abone Bilgileri</h2>
-      <label for="grup">Abone Grubu</label>
-      <select id="grup">
-        <option value="1.05">Mesken (KBK max: 1,0500)</option>
-        <option value="1.0938" selected>Ticarethane / Sanayi (KBK max: 1,0938)</option>
-        <option value="custom">Diğer / Özel katsayı</option>
-      </select>
-      <div id="customKbkWrap" style="display:none;">
-        <label for="customKbk">Özel KBK Katsayısı</label>
-        <input type="number" id="customKbk" value="1.05" step="0.0001">
-      </div>
-      <div class="kbk-note">KBK, sözleşmede sabitlenen bir değerdir ve EPDK tarafından belirlenen tavanı aşamaz.</div>
-
-      <label for="tuketim">Aylık Tüketim (kWh)</label>
-      <input type="number" id="tuketim" value="20000" step="100">
-    </div>
-
-    <div class="card">
-      <h2>
-        Ek Kalemler (opsiyonel)
-        <button class="toggle-btn" id="extrasToggle" type="button">Ekle / Gizle</button>
-      </h2>
-      <div class="hint">SKTT formülü yalnızca enerji bedelini hesaplar. Değerler örnek amaçlıdır, güncel oranları tedarikçinizden teyit edin.</div>
-      <div class="extras-inputs" id="extrasInputs">
-        <div>
-          <label for="iletimDagitim">İletim + Dağıtım Bedeli (TL/kWh)</label>
-          <input type="number" id="iletimDagitim" value="0.35" step="0.01">
-        </div>
-        <div>
-          <label for="kayipKacak">Kayıp-Kaçak Bedeli (TL/kWh)</label>
-          <input type="number" id="kayipKacak" value="0.15" step="0.01">
-        </div>
-        <div>
-          <label for="btvOrani">BTV Oranı (%)</label>
-          <input type="number" id="btvOrani" value="5" step="0.1">
-        </div>
-        <div>
-          <label for="kdvOrani">KDV Oranı (%)</label>
-          <input type="number" id="kdvOrani" value="20" step="0.1">
-        </div>
-      </div>
-    </div>
-
-    <div class="card result-card">
-      <h2>Sonuç</h2>
-      <div class="formula" id="formulaText">SKTT = (PTF + YEKDEM) × KBK</div>
-      <div class="big-result" id="unitPrice">-- <span class="unit">TL/MWh</span></div>
-      <div style="color: var(--muted); font-size:0.85rem;" id="unitPriceKwh">-- TL/kWh</div>
-
-      <div class="breakdown">
-        <div class="bd-item">
-          <p class="label">PTF + YEKDEM (± Mahsup)</p>
-          <div class="val" id="sumVal">--</div>
-        </div>
-        <div class="bd-item">
-          <p class="label">Uygulanan KBK</p>
-          <div class="val" id="kbkVal">--</div>
-        </div>
-      </div>
-
-      <div class="extras-list" id="extrasList" style="display:none;">
-        <div class="extra-row"><span>Enerji Bedeli (SKTT × tüketim)</span><span class="v" id="lineEnerji">--</span></div>
-        <div class="extra-row"><span>İletim + Dağıtım</span><span class="v" id="lineIletim">--</span></div>
-        <div class="extra-row"><span>Kayıp-Kaçak</span><span class="v" id="lineKayip">--</span></div>
-        <div class="extra-row"><span>Ara Toplam</span><span class="v" id="lineAraToplam">--</span></div>
-        <div class="extra-row"><span>BTV</span><span class="v" id="lineBtv">--</span></div>
-        <div class="extra-row"><span>KDV</span><span class="v" id="lineKdv">--</span></div>
-      </div>
-
-      <div class="total-row">
-        <span class="tlabel" id="totalLabel">Aylık Tahmini Enerji Bedeli</span>
-        <span class="tval" id="totalBill">-- TL</span>
-      </div>
-    </div>
-
-    <div class="footnote">
-      Hesaplama, EPDK'nın SKTT = (PTF + YEKDEM) × KBK formülüne dayanır. PTF ve YEKDEM için güncel verileri
-      EPİAŞ Şeffaflık Platformu ve rapor.epias.com.tr üzerinden teyit edin. Bu araç tahmini bir hesaplama
-      sunar, resmi fatura yerine geçmez.
-    </div>
-  </div>
-
-  <!-- ============ TEMİNAT PANEL ============ -->
-  <div class="panel" id="panel-teminat">
-
-    <div class="card">
-      <h2>Proje Bilgileri</h2>
-      <div class="row">
-        <div>
-          <label for="guc">Kurulu Güç (MWm)</label>
-          <input type="number" id="guc" value="50" step="1" min="0.1">
-        </div>
-        <div>
-          <label for="onlisansTeminat">Ön Lisans Teminatı (TL/MW)</label>
-          <input type="number" id="onlisansTeminat" value="70000" step="1000">
-        </div>
-      </div>
-
-      <label for="byt">BYT — Birim Yatırım Tutarı (TL/MWm)</label>
-      <div class="slider-row">
-        <input type="range" id="byt" min="9000000" max="61500000" step="500000" value="20000000">
-        <span class="slider-val" id="bytVal">20.000.000</span>
-      </div>
-      <div class="hint">EPDK kararına göre kaynak türüne göre 9.000.000 – 61.500.000 TL/MWm bandında değişiyor.</div>
-
-      <label for="oran">Teminat Oranı (%)</label>
-      <div class="slider-row">
-        <input type="range" id="oran" min="1" max="10" step="0.5" value="5">
-        <span class="slider-val" id="oranVal">5%</span>
-      </div>
-      <div class="hint">Banka teminat mektubu tutarı, toplam yatırımın belirlenen oranını (üst sınır %5) geçemez.</div>
-
-      <label for="tavan">Teminat Üst Sınırı / Tavan (TL)</label>
-      <input type="number" id="tavan" value="78600000" step="100000">
-      <div class="hint">EPDK'nın kararla belirlediği azami teminat tutarı — hesaplanan teminat bu değeri aşamaz.</div>
-    </div>
-
-    <div class="card result-card">
-      <h2>Sonuç</h2>
-      <div class="breakdown">
-        <div class="bd-item">
-          <p class="label">Toplam Yatırım Tutarı (Güç × BYT)</p>
-          <div class="val" id="toplamYatirim">--</div>
-        </div>
-        <div class="bd-item">
-          <p class="label">Ön Lisans Teminatı</p>
-          <div class="val" id="onlisansTutar">--</div>
-        </div>
-      </div>
-      <div style="margin-top:16px;">
-        <p class="label" style="font-size:0.75rem;color:var(--muted);margin:0;">Hesaplanan Üretim Lisansı Teminatı</p>
-        <div class="big-result" id="teminatSonuc">--</div>
-        <div id="capBadge"></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Kurulu Güç Arttıkça Teminat — Pik / Tavan Grafiği</h2>
-      <div class="chart-wrap">
-        <svg id="lineChart" viewBox="0 0 700 300" style="width:100%; height:auto;"></svg>
-      </div>
-      <div class="legend">
-        <span><i class="dot" style="background:var(--blue)"></i> Formülle hesaplanan teminat</span>
-        <span><i class="dot" style="background:var(--amber)"></i> Tavan (üst sınır)</span>
-        <span><i class="dot" style="background:var(--green)"></i> Girilen kurulu güç noktası</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>BYT Bandına Göre Karşılaştırma (Girilen Güç İçin)</h2>
-      <div class="chart-wrap">
-        <svg id="barChart" viewBox="0 0 700 260" style="width:100%; height:auto;"></svg>
-      </div>
-      <div class="legend">
-        <span><i class="dot" style="background:var(--green)"></i> Min BYT (9M)</span>
-        <span><i class="dot" style="background:var(--accent2)"></i> Girilen BYT</span>
-        <span><i class="dot" style="background:var(--red)"></i> Max BYT (61,5M)</span>
-      </div>
-    </div>
-
-    <div class="footnote">
-      Teminat = Kurulu Güç (MWm) × BYT × Oran, üst sınır (tavan) ile sınırlı. BYT değerleri kaynak türüne göre
-      EPDK kararlarıyla değişir. Ön lisans teminatı ayrı ve sabit bir tutardır (MW başına). Güncel rakamlar için
-      epdk.gov.tr → Lisans İşlemleri sayfasını kontrol edin.
-    </div>
-  </div>
-
-</div>
-
-<script>
-  // ---------- TAB SWITCHING ----------
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
-    });
-  });
-
-  // ---------- SKTT LOGIC ----------
-  const ptfEl = document.getElementById('ptf');
-  const yekdemEl = document.getElementById('yekdem');
-  const yekdemPresetEl = document.getElementById('yekdemPreset');
-  const grupEl = document.getElementById('grup');
-  const customWrap = document.getElementById('customKbkWrap');
-  const customKbkEl = document.getElementById('customKbk');
-  const tuketimEl = document.getElementById('tuketim');
-  const mahsupOnEl = document.getElementById('mahsupOn');
-  const mahsupWrap = document.getElementById('mahsupWrap');
-  const mahsupFarkEl = document.getElementById('mahsupFark');
-  const extrasToggle = document.getElementById('extrasToggle');
-  const extrasInputs = document.getElementById('extrasInputs');
-  const extrasList = document.getElementById('extrasList');
-  const iletimEl = document.getElementById('iletimDagitim');
-  const kayipEl = document.getElementById('kayipKacak');
-  const btvEl = document.getElementById('btvOrani');
-  const kdvEl = document.getElementById('kdvOrani');
-
-  let extrasOn = false;
-
-  yekdemPresetEl.addEventListener('change', () => {
-    if (yekdemPresetEl.value !== 'custom') {
-      yekdemEl.value = yekdemPresetEl.value;
-      calcSKTT();
-    }
-  });
-  mahsupOnEl.addEventListener('change', () => {
-    mahsupWrap.style.display = mahsupOnEl.checked ? 'block' : 'none';
-    calcSKTT();
-  });
-  extrasToggle.addEventListener('click', () => {
-    extrasOn = !extrasOn;
-    extrasInputs.classList.toggle('open', extrasOn);
-    extrasList.style.display = extrasOn ? 'block' : 'none';
-    calcSKTT();
-  });
-
-  function getKbk() {
-    if (grupEl.value === 'custom') {
-      customWrap.style.display = 'block';
-      return parseFloat(customKbkEl.value) || 0;
-    }
-    customWrap.style.display = 'none';
-    return parseFloat(grupEl.value);
-  }
-
-  function formatTL(num, decimals=2) {
-    return num.toLocaleString('tr-TR', {minimumFractionDigits: decimals, maximumFractionDigits: decimals});
-  }
-
-  function calcSKTT() {
-    const ptf = parseFloat(ptfEl.value) || 0;
-    const yekdem = parseFloat(yekdemEl.value) || 0;
-    const mahsup = mahsupOnEl.checked ? (parseFloat(mahsupFarkEl.value) || 0) : 0;
-    const kbk = getKbk();
-    const tuketim = parseFloat(tuketimEl.value) || 0;
-
-    const sum = ptf + yekdem + mahsup;
-    const unitMWh = sum * kbk;
-    const unitKwh = unitMWh / 1000;
-    const enerjiBedeli = unitKwh * tuketim;
-
-    document.getElementById('formulaText').textContent =
-      mahsupOnEl.checked ? 'SKTT = (PTF + YEKDEM ± Mahsuplaşma) × KBK' : 'SKTT = (PTF + YEKDEM) × KBK';
-    document.getElementById('unitPrice').innerHTML = formatTL(unitMWh, 2) + ' <span class="unit">TL/MWh</span>';
-    document.getElementById('unitPriceKwh').textContent = formatTL(unitKwh, 4) + ' TL/kWh';
-
-    document.getElementById('sumVal').innerHTML = formatTL(sum, 2) + ' TL/MWh' +
-      (mahsup !== 0 ? `<span class="mahsup-tag ${mahsup > 0 ? 'mahsup-plus' : 'mahsup-minus'}">${mahsup > 0 ? '+' : ''}${formatTL(mahsup,2)}</span>` : '');
-    document.getElementById('kbkVal').textContent = formatTL(kbk, 4);
-
-    let finalTotal = enerjiBedeli;
-    if (extrasOn) {
-      const iletim = (parseFloat(iletimEl.value) || 0) * tuketim;
-      const kayip = (parseFloat(kayipEl.value) || 0) * tuketim;
-      const araToplam = enerjiBedeli + iletim + kayip;
-      const btv = araToplam * ((parseFloat(btvEl.value) || 0) / 100);
-      const araToplam2 = araToplam + btv;
-      const kdv = araToplam2 * ((parseFloat(kdvEl.value) || 0) / 100);
-      finalTotal = araToplam2 + kdv;
-
-      document.getElementById('lineEnerji').textContent = formatTL(enerjiBedeli) + ' TL';
-      document.getElementById('lineIletim').textContent = formatTL(iletim) + ' TL';
-      document.getElementById('lineKayip').textContent = formatTL(kayip) + ' TL';
-      document.getElementById('lineAraToplam').textContent = formatTL(araToplam) + ' TL';
-      document.getElementById('lineBtv').textContent = formatTL(btv) + ' TL';
-      document.getElementById('lineKdv').textContent = formatTL(kdv) + ' TL';
-      document.getElementById('totalLabel').textContent = 'Tahmini Toplam Fatura (tüm kalemler dahil)';
-    } else {
-      document.getElementById('totalLabel').textContent = 'Aylık Tahmini Enerji Bedeli';
-    }
-    document.getElementById('totalBill').textContent = formatTL(finalTotal) + ' TL';
-  }
-
-  [ptfEl, yekdemEl, grupEl, customKbkEl, tuketimEl, mahsupFarkEl, iletimEl, kayipEl, btvEl, kdvEl].forEach(el => {
-    el.addEventListener('input', calcSKTT);
-    el.addEventListener('change', calcSKTT);
-  });
-
-  // ---------- TEMİNAT LOGIC ----------
-  const gucEl = document.getElementById('guc');
-  const bytEl = document.getElementById('byt');
-  const bytValEl = document.getElementById('bytVal');
-  const oranEl = document.getElementById('oran');
-  const oranValEl = document.getElementById('oranVal');
-  const tavanEl = document.getElementById('tavan');
-  const onlisansTeminatEl = document.getElementById('onlisansTeminat');
-
-  function fmtInt(num) { return Math.round(num).toLocaleString('tr-TR'); }
-
-  function calcTeminatVal(guc, byt, oran, tavan) {
-    const yatirim = guc * byt;
-    const raw = yatirim * (oran / 100);
-    return { yatirim, raw, capped: Math.min(raw, tavan) };
-  }
-
-  function drawLineChart(guc, byt, oran, tavan) {
-    const svg = document.getElementById('lineChart');
-    const W = 700, H = 300, padL = 70, padB = 36, padT = 16, padR = 16;
-    const maxGuc = Math.max(guc * 2.2, 20);
-    const points = [];
-    const N = 60;
-    let maxVal = tavan * 1.15;
-    for (let i = 0; i <= N; i++) {
-      const g = (maxGuc / N) * i;
-      const r = calcTeminatVal(g, byt, oran, tavan);
-      points.push({ g, v: r.capped });
-    }
-    const xScale = g => padL + (g / maxGuc) * (W - padL - padR);
-    const yScale = v => H - padB - (v / maxVal) * (H - padT - padB);
-    let path = 'M ' + points.map(p => `${xScale(p.g).toFixed(1)},${yScale(p.v).toFixed(1)}`).join(' L ');
-    const tavanY = yScale(tavan);
-    const curPoint = calcTeminatVal(guc, byt, oran, tavan);
-    const curX = xScale(guc), curY = yScale(curPoint.capped);
-
-    let gridLines = '';
-    for (let i = 0; i <= 4; i++) {
-      const y = padT + ((H - padT - padB) / 4) * i;
-      const val = maxVal - (maxVal / 4) * i;
-      gridLines += `<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="#2d3540" stroke-width="1"/>`;
-      gridLines += `<text x="${padL-8}" y="${y+4}" font-size="10" fill="#9ca3af" text-anchor="end">${(val/1e6).toFixed(0)}M</text>`;
-    }
-    for (let i = 0; i <= 4; i++) {
-      const x = padL + ((W - padL - padR) / 4) * i;
-      const val = (maxGuc / 4) * i;
-      gridLines += `<text x="${x}" y="${H-padB+18}" font-size="10" fill="#9ca3af" text-anchor="middle">${val.toFixed(0)} MW</text>`;
-    }
-
-    svg.innerHTML = `
-      ${gridLines}
-      <line x1="${padL}" y1="${tavanY}" x2="${W-padR}" y2="${tavanY}" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,4"/>
-      <text x="${W-padR}" y="${tavanY-6}" font-size="10" fill="#f59e0b" text-anchor="end">Tavan: ${(tavan/1e6).toFixed(1)}M TL</text>
-      <path d="${path}" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
-      <circle cx="${curX}" cy="${curY}" r="6" fill="#22c55e" stroke="#0f1419" stroke-width="2"/>
-      <text x="${curX}" y="${curY-14}" font-size="11" fill="#22c55e" text-anchor="middle" font-weight="600">${guc} MW</text>
-    `;
-  }
-
-  function drawBarChart(guc, byt, oran, tavan) {
-    const svg = document.getElementById('barChart');
-    const W = 700, H = 260, padB = 40, padT = 20;
-    const minBYT = 9000000, maxBYT = 61500000;
-    const scenarios = [
-      { label: 'Min BYT (9M)', val: calcTeminatVal(guc, minBYT, oran, tavan).capped, color: '#22c55e' },
-      { label: 'Girilen BYT', val: calcTeminatVal(guc, byt, oran, tavan).capped, color: '#a855f7' },
-      { label: 'Max BYT (61,5M)', val: calcTeminatVal(guc, maxBYT, oran, tavan).capped, color: '#f87171' },
-    ];
-    const maxVal = Math.max(...scenarios.map(s => s.val), tavan) * 1.1;
-    const barW = 130;
-    const gap = (W - barW * 3) / 4;
-    let bars = '';
-    scenarios.forEach((s, i) => {
-      const x = gap + i * (barW + gap);
-      const h = (s.val / maxVal) * (H - padT - padB);
-      const y = H - padB - h;
-      bars += `
-        <rect x="${x}" y="${y}" width="${barW}" height="${h}" fill="${s.color}" rx="6"/>
-        <text x="${x + barW/2}" y="${y - 8}" font-size="12" fill="#e8eaed" text-anchor="middle" font-weight="600">${(s.val/1e6).toFixed(2)}M</text>
-        <text x="${x + barW/2}" y="${H - padB + 18}" font-size="10.5" fill="#9ca3af" text-anchor="middle">${s.label}</text>
-      `;
-    });
-    const tavanY = H - padB - (tavan / maxVal) * (H - padT - padB);
-    svg.innerHTML = `
-      <line x1="0" y1="${tavanY}" x2="${W}" y2="${tavanY}" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,4"/>
-      <text x="8" y="${tavanY-6}" font-size="10" fill="#f59e0b">Tavan</text>
-      ${bars}
-      <line x1="0" y1="${H-padB}" x2="${W}" y2="${H-padB}" stroke="#2d3540" stroke-width="1"/>
-    `;
-  }
-
-  function calcTeminat() {
-    const guc = parseFloat(gucEl.value) || 0;
-    const byt = parseFloat(bytEl.value) || 0;
-    const oran = parseFloat(oranEl.value) || 0;
-    const tavan = parseFloat(tavanEl.value) || 0;
-    const onlisansBirim = parseFloat(onlisansTeminatEl.value) || 0;
-
-    bytValEl.textContent = fmtInt(byt) + ' TL';
-    oranValEl.textContent = oran + '%';
-
-    const r = calcTeminatVal(guc, byt, oran, tavan);
-    document.getElementById('toplamYatirim').textContent = fmtInt(r.yatirim) + ' TL';
-    document.getElementById('onlisansTutar').textContent = fmtInt(guc * onlisansBirim) + ' TL';
-    document.getElementById('teminatSonuc').textContent = fmtInt(r.capped) + ' TL';
-
-    const capBadge = document.getElementById('capBadge');
-    capBadge.innerHTML = (r.raw > tavan)
-      ? '<span class="cap-badge">Tavan devrede — formülle hesaplanan ' + fmtInt(r.raw) + ' TL yerine üst sınır uygulanıyor</span>'
-      : '';
-
-    drawLineChart(guc, byt, oran, tavan);
-    drawBarChart(guc, byt, oran, tavan);
-  }
-
-  [gucEl, bytEl, oranEl, tavanEl, onlisansTeminatEl].forEach(el => {
-    el.addEventListener('input', calcTeminat);
-    el.addEventListener('change', calcTeminat);
-  });
-
-  // ---------- INIT ----------
-  calcSKTT();
-  calcTeminat();
-</script>
-</body>
-</html>
+                <div class="lg:col-span-4 flex justify-center lg:justify-end mt-10 lg:mt-0">
+<!-- ... existing code ... -->
